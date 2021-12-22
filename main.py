@@ -1,6 +1,8 @@
 from flask import Flask
 from flask_cors import CORS
 import markets
+from waitress import serve
+import os
 
 
 # function to return an initialized flask app
@@ -18,13 +20,12 @@ def create_app():
 
 # get initialized flask app and run it
 app = create_app()
-app.run(debug=False)
+# app.run(debug=False)
 
-# from waitress import serve
 
-# serve(app, host="0.0.0.0", port=8080)
+if __name__ == "__main__":
+    # app.run(host='0.0.0.0')
+    port = int(os.environ.get("PORT", 5000))
+    # We now use this syntax to server our app.
+    serve(app, host="0.0.0.0", port=port)
 
-# below there is a security line not sure if we need it
-# if __name__ == "__main__":
-#     # running in dev mode will re-run the server everytime you hit save
-#     app.run(debug=True)
