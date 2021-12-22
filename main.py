@@ -6,7 +6,7 @@ import markets
 # function to return an initialized flask app
 def create_app():
     app = Flask(__name__)
-    # CORS(app)
+
     # flask apps have a secret key that ecrypts session data
     app.config["SECRET_KEY"] = "happy scanning"
     # import and register your blueprints/routes
