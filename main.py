@@ -18,7 +18,7 @@ def create_app():
 
 # get initialized flask app and run it
 app = create_app()
-app.run(debug=True)
+app.run(debug=False)
 
 # below there is a security line not sure if we need it
 # if __name__ == "__main__":
