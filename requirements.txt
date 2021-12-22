@@ -2,3 +2,4 @@ ccxt==1.64.14
 Flask==1.1.2
 Flask_Cors==3.0.10
 requests==2.26.0
+waitress==2.0.0

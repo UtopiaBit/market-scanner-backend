@@ -1,0 +1,5 @@
+
+requirements.txt is used by heroku to install the dependencies. When you add a new package you need to do:
+
+cd into root
+pipreqs .
